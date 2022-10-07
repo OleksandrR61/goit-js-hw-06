@@ -7,14 +7,14 @@ function titleOfElement(element) {
 }
 
 function listData(list) {
-    [...list.children].map(element => {
+    [...list.children].forEach(element => {
         console.log(`Category: ${titleOfElement(element)}`);
         console.log(`Elements: ${numberOfListItems(element.querySelector('ul'))}`);
     });
 }
 
-const listOfCategories = document.querySelector('#categories');
+const listOfCategoriesRef = document.querySelector('#categories');
 
-console.log(`Number of categories: ${numberOfListItems(listOfCategories)}`);
+console.log(`Number of categories: ${numberOfListItems(listOfCategoriesRef)}`);
 
-listData(listOfCategories);
+listData(listOfCategoriesRef);
